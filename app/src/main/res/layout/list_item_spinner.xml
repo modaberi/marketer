@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.parsa.marketer.common.SpinnerBottomSheetDialog.SpinnerItem" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            style="@style/StyleTextTitle"
+            android:padding="@dimen/margin_16"
+            android:text='@{item.title}'/>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+
+
+    </LinearLayout>
+
+</layout>
+

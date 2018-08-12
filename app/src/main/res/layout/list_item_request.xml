@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="Utils.ValidationUtil" />
+
+        <import type="com.parsa.marketer.request.RequestListAdapter.RequestVH" />
+
+        <variable
+            name="request"
+            type="com.parsa.marketer.database.model.Request" />
+
+       <variable
+            name="handler"
+            type="RequestVH" />
+
+
+    </data>
+
+    <android.support.v7.widget.CardView style="@style/StyleCardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_request_no"
+                    style="@style/StyleTextTitle"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text='@{ValidationUtil.notNullOrEmpty(request.requestNo)?request.requestNo:@string/label_empty_item}' />
+
+                <TextView
+                    style="@style/StyleTextSubTitle"
+                    android:text="@string/label_request_no" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    style="@style/StyleTextTitle"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text='@{ValidationUtil.notNullOrEmpty(request.state)?request.state:@string/label_empty_item}' />
+
+                <TextView
+                    style="@style/StyleTextSubTitle"
+                    android:text="@string/label_state" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_owner_ssn"
+                    style="@style/StyleTextTitle"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text='@{ValidationUtil.notNullOrEmpty(request.ssn)?request.ssn:@string/label_empty_item}' />
+
+                <TextView
+                    style="@style/StyleTextSubTitle"
+                    android:text="@string/label_ssn" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_owner"
+                    style="@style/StyleTextTitle"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text='@{ValidationUtil.notNullOrEmpty(request.ownerName)?request.ownerName:@string/label_empty_item}' />
+
+                <TextView
+                    style="@style/StyleTextSubTitle"
+                    android:text="@string/label_request_owner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_last_acceptance_date"
+                    style="@style/StyleTextTitle"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text='@{ValidationUtil.notNullOrEmpty(request.lastAcceptanceDate)?request.lastAcceptanceDate:@string/label_empty_item}' />
+
+                <TextView
+                    style="@style/StyleTextSubTitle"
+                    android:text="@string/label_last_acceptance_date" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_nurse"
+                    style="@style/StyleTextTitle"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text='@{ValidationUtil.notNullOrEmpty(request.nurseName)?request.nurseName:@string/label_empty_item}' />
+
+                <TextView
+                    style="@style/StyleTextSubTitle"
+                    android:text="@string/label_nurse" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_horizontal_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_8"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    style="@style/StyleHeaderDarkFullRed"
+                    android:layout_weight=".15"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/label_btn_cancel"/>
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    style="@style/StyleHeaderDarkFullGreen"
+                    android:layout_weight=".2"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/label_btn_send" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
+
